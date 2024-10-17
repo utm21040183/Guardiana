@@ -1,0 +1,18 @@
+/* Navbar.css */
+.navbar {
+    background-color: #ff699b; /* Color del navbar */
+    padding: 20px; /* Espaciado */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  .navbar-brand h1 {
+    color: white; /* Color del título */
+    margin: 0; /* Eliminar margen */
+    margin-left: 30px;
+  }
+  
+  
+  

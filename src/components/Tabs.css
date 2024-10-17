@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px; /* Margen alrededor de las pestañas */
+  }
+  
+  .tab-titles {
+    display: flex;
+    cursor: pointer; /* Cambiar cursor */
+  }
+  
+  .tab-title {
+    padding: 10px 20px; /* Espaciado */
+    background: #f0f0f0; /* Color de fondo */
+    margin-right: 5px; /* Espacio entre las pestañas */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s; /* Transición suave */
+  }
+  
+  .tab-title.active {
+    background: #ff4081; /* Color de fondo de la pestaña activa */
+    color: white; /* Color del texto de la pestaña activa */
+  }
+  
+  .tab-content {
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background: white; /* Color de fondo */
+  }
+  

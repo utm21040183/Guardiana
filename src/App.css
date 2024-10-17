@@ -1,0 +1,19 @@
+.content {
+  flex: 1; /* Para que ocupe el espacio restante */
+  display: flex; /* Usar flexbox para organizar el contenido */
+  justify-content: space-between; /* Espacio entre el mapa y predicciones */
+  align-items: flex-start; /* Alinear elementos en la parte superior */
+  padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.card {
+  background: white; /* Color de fondo de las tarjetas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 20px; /* Margen entre tarjetas */
+  padding: 20px; /* Espaciado interno */
+  flex: 1; /* Permitir que las tarjetas crezcan */
+  max-width: 600px; /* Ancho máximo del mapa */
+}
+
+

@@ -1,0 +1,40 @@
+/* src/components/Audio.css */
+.audio-recorder {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .sound-wave {
+    margin: 20px auto;
+    width: 300px;
+    height: 100px;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #FF4081;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #e03371;
+  }
+  
+  .audio-player {
+    margin-top: 20px;
+  }
+  
+  audio {
+    margin-top: 10px;
+    width: 300px;
+  }
+  

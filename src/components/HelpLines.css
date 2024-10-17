@@ -1,0 +1,36 @@
+.help-lines-container {
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para la tarjeta */
+    padding: 20px;
+    margin: 15px 0; /* Espaciado entre tarjetas */
+  }
+  
+  h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .help-line-card {
+    background-color: #e9ecef; /* Color de fondo suave para las líneas de ayuda */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px;
+    margin: 10px 0; /* Espaciado entre líneas de ayuda */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  }
+  
+  .help-line-card:hover {
+    background-color: #d3d3d3; /* Color de fondo al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  }
+  
+  .help-line {
+    text-decoration: none; /* Quitar subrayado */
+    color: #f7047d; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .help-line:hover {
+    text-decoration: underline; /* Subrayar texto al pasar el mouse */
+  }
+  
