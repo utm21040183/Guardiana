@@ -1,43 +1,48 @@
 .geo-location-container {
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .geo-location-container:hover {
-    transform: translateY(-5px);
-  }
-  
-  h3 {
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .location-info {
-    font-size: 18px;
-    color: #f7047d;
-  }
-  
-  .error-message {
-    color: #dc3545;
-    font-weight: bold;
-  }
-  
-  .send-message-button {
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .send-message-button:hover {
-    background-color: #e91e63;
-  }
-  
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.location-info {
+  font-size: 18px;
+  color: #ff007a;
+}
+
+.error-message {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Botón de enviar ubicación: fijado en la parte inferior y centrado */
+.send-message-button {
+  position: fixed; /* Fijado en la ventana */
+  bottom: 20px;    /* A 20px del fondo de la ventana */
+  left: 50%;       /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centrar completamente */
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.send-message-button:hover {
+  background-color: #e91e63;
+}

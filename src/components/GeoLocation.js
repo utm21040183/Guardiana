@@ -34,7 +34,7 @@ const GeoLocation = () => {
   }, []);
 
   const sendMessage = () => {
-    const phoneNumber = '524491242071'; 
+    const phoneNumber = '911'; 
     const message = `Necesito ayuda!! ${location.address} (Lat: ${location.lat}, Lng: ${location.lng})`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -55,7 +55,7 @@ const GeoLocation = () => {
           <p>Latitud: {location.lat}</p>
           <p>Longitud: {location.lng}</p>
           <p>Dirección: {location.address}</p>
-          <button onClick={sendMessage} className="send-message-button">Enviar ubicación por WhatsApp</button>
+          <button onClick={sendMessage} className="send-message-button">Enviar mi ubicación</button>
         </div>
       )}
     </div>

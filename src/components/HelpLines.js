@@ -7,12 +7,17 @@ const HelpLines = () => {
       <h3>Líneas de Ayuda:</h3>
       <div className="help-line-card">
         <a href="https://wa.link/iidnrc" className="help-line">
-          Línea de Ayuda 1
+          Mamá 
         </a>
       </div>
       <div className="help-line-card">
         <a href="https://wa.link/iidnrc" className="help-line">
-          Línea de Ayuda 2
+          Papá
+        </a>
+      </div>
+      <div className="help-line-card">
+        <a href="https://wa.link/iidnrc" className="help-line">
+          Agregar más...
         </a>
       </div>
      

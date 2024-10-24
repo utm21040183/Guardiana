@@ -16,4 +16,15 @@
   max-width: 600px; /* Ancho máximo del mapa */
 }
 
+.stats-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.bar-chart, .pie-chart {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+
 

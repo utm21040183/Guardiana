@@ -1,7 +1,5 @@
-
 import React from 'react';
 import Navbar from './components/Navbar';
-import PanicButton from './components/PanicButton';
 import GeoLocation from './components/GeoLocation';
 import HelpLines from './components/HelpLines';
 import Predictions from './components/Predictions';
@@ -10,6 +8,7 @@ import MapTab from './components/MapTab';
 import Audio from './components/Audio'; 
 import CallSimulation from './components/CallSimulation';
 import SafetyGuide from './components/SafetyGuide'; 
+import Stats from './components/Stats'; // Componente para las estadísticas con gráficos
 import './App.css';
 
 const App = () => {
@@ -21,7 +20,7 @@ const App = () => {
           <MapTab />
         </div>
         <div label="Predicciones">
-          <Predictions />
+          <Predictions /> {/* Pestaña para predicciones */}
         </div>
         <div label="Líneas de Ayuda">
           <HelpLines />
@@ -30,14 +29,16 @@ const App = () => {
           <Audio /> 
         </div>
         <div label="Simulación de Llamadas">
-          <CallSimulation /> {/* Agregar la simulación de llamadas aquí */}
+          <CallSimulation /> {/* Simulación de llamadas */}
         </div>
-        <div label="Guía de Seguridad"> {/* Nueva pestaña */}
-          <SafetyGuide />
+        <div label="Guía de Seguridad"> 
+          <SafetyGuide /> {/* Guía de seguridad */}
+        </div>
+        <div label="Estadísticas"> {/* Nueva pestaña solo para estadísticas */}
+          <Stats /> {/* Componente de estadísticas con gráficos */}
         </div>
       </Tabs>
       <GeoLocation />
-      <PanicButton />
     </div>
   );
 };

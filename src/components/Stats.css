@@ -1,0 +1,26 @@
+.chart-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  .table-container {
+    margin: 20px auto;
+    width: 80%;
+    overflow-x: auto;
+  }
+  
+  .incident-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .incident-table th, .incident-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .incident-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  

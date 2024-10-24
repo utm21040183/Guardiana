@@ -1,31 +1,86 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Fondo claro */
+}
+
 .tabs {
-    display: flex;
-    flex-direction: column;
-    margin: 20px; /* Margen alrededor de las pestañas */
-  }
-  
-  .tab-titles {
-    display: flex;
-    cursor: pointer; /* Cambiar cursor */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Para evitar desbordamiento */
+}
+
+/* Estilos para el menú desplegable */
+.menu-button {
+  padding: 10px 20px; /* Espaciado */
+  background: #ff4081; /* Color de fondo */
+  color: white; /* Color de texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar cursor */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+.menu {
+  display: none; /* Ocultamos el menú inicialmente */
+  flex-direction: column; /* Colocamos los elementos en columna */
+  width: 100%; /* Ocupa todo el ancho */
+  background: #fff; /* Fondo blanco */
+  border: 1px solid #ddd; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Mostrar el menú al hacer clic en el botón */
+.menu.active {
+  display: flex; /* Mostrar el menú */
+}
+
+.tab-titles {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las pestañas se envuelvan en dispositivos más pequeños */
+  cursor: pointer; /* Cambiar cursor */
+}
+
+.tab-title {
+  padding: 10px 20px; /* Espaciado */
+  background: #f0f0f0; /* Color de fondo */
+  margin-right: 5px; /* Espacio entre las pestañas */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background 0.3s; /* Transición suave */
+  flex-grow: 1; /* Permite que las pestañas crezcan */
+  text-align: center; /* Centrar el texto */
+}
+
+.tab-title.active {
+  background: #ff4081; /* Color de fondo de la pestaña activa */
+  color: white; /* Color del texto de la pestaña activa */
+}
+
+.tab-content {
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  background: white; /* Color de fondo */
+  margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
   .tab-title {
-    padding: 10px 20px; /* Espaciado */
-    background: #f0f0f0; /* Color de fondo */
-    margin-right: 5px; /* Espacio entre las pestañas */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background 0.3s; /* Transición suave */
+    flex-basis: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    margin-bottom: 5px; /* Espacio entre pestañas */
   }
-  
-  .tab-title.active {
-    background: #ff4081; /* Color de fondo de la pestaña activa */
-    color: white; /* Color del texto de la pestaña activa */
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    margin: 10px; /* Menor margen en dispositivos pequeños */
   }
-  
+
   .tab-content {
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ddd; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    background: white; /* Color de fondo */
+    padding: 10px; /* Menor espaciado en el contenido */
   }
-  
+}

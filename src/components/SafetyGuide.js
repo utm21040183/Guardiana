@@ -1,8 +1,47 @@
 // src/components/SafetyGuide.js
-import React from 'react';
+import React, {useState, useRef } from 'react';
+import emailjs from 'emailjs-com'
 import './SafetyGuide.css'; // Crea este archivo para estilos personalizados
 
 const SafetyGuide = () => {
+
+    const [formData, setFormData] = useState ({
+        message: ''
+    });
+    
+    const [isSent, setIsSent] =useState(false);
+
+    const formRef = useRef();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      };
+    
+      const sendEmail = (e) => {
+        e.preventDefault();
+        // Usamos formRef.current para referirnos al formulario HTML
+        emailjs
+          .sendForm(
+            'service_p5cmxg2',
+            'template_8nnwt2h',
+            formRef.current,
+            '-VygPqkxS1abbt3c6'
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              setIsSent(true); // Muestra un mensaje de éxito
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      };
+
   return (
     <div className="safety-guide">
 
@@ -109,6 +148,30 @@ const SafetyGuide = () => {
             <li><strong>Emergencias:</strong> 911</li>
             </ul>
       </div>
+      <section id="contacto">
+  <h2>Contacto</h2>
+  {isSent && <p>Mensaje enviado con éxito!</p>}
+  <form
+    ref={formRef} // Asignamos la referencia al formulario
+    onSubmit={sendEmail}
+  >
+    <div className="form-group">
+      
+    </div>
+    <div className="form-group">
+      <label htmlFor="message">Mensaje:</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Escribe tu mensaje aquí..."
+        value={formData.message}
+        onChange={handleChange}
+        required
+      ></textarea>
+    </div>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+</section>
     </div>
   );
 };
